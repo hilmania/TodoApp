@@ -28,11 +28,11 @@ class App extends React.Component {
   tampilTodos = () => {
     return this.state.todo.map(t=> {
       return (
-        <TouchableOpacity key={t}>
+        <TouchableOpacity key={t.text}>
           <Text
             style={styles.todo}
             onPress={()=>{this.hapusTodo(t)}}
-          >{t}</Text>
+      >{t.text} {t.done}</Text>
         </TouchableOpacity>
       )
     })
